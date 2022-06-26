@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/css/custom.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/js/all.js">
     <title>Saas Bug Tracker</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-          <a class="navbar-brand" href="#">BugNet</a>
+          <a class="navbar-brand" href="#">BugsNet</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -44,16 +46,55 @@
         </div>
       </nav>
 
-      <section class="container">
-        <div class="row my-3">
-            <img src="/images/illustration-devices.svg" class="col-md-6 order-md-2 my-3 my-md-0 img-fluid" alt="...">
-            <div class="container py-lg-4 col-md-6 order-md-1 d-flex flex-column">
-                <p class="h5">&ensp; BugNet is proved as the most team-friendly tool to track emerging bugs and idle tasks.Due to convenient lebeling-system, it's hard to miss a task appointed to you. Furthermore, get a notification prior to deadline.</p>
-                <p class="h5">&ensp; If practicality and employee satisfaction is not the biggest priority in your company - check out our competetive prices.</p>
-                <a class="btn btn-primary text-uppercase align-self-center my-2 my-md-4" href="#" role="button">prices</a>
+      <section class="container-fluid">
+        <div class="container d-flex flex-column mt-3">
+          <p class="text-center">BugsNet built with idea of better performance.</p>
+          <p class="text-center">Great for managing different variety of tasks. </p>
+          <div class="row gap-2 justify-content-center">
+            <div class="task-wrapper col-4 col-sm-1 d-flex flex-column align-items-center">
+              <i class="fa-solid fa-palette"></i>
+              <p>design</p>
+            </div>
+            <div class="task-wrapper col-4 col-sm-1 d-flex flex-column align-items-center">
+              <i class="fas fa-code"></i>
+              <p>development</p>
+            </div>
+            <div class="task-wrapper col-4 col-sm-1 d-flex flex-column align-items-center">
+              <i class="fa-solid fa-sitemap"></i>
+              <p>qa</p>
+            </div>
+            <div class="task-wrapper col-4 col-sm-1 d-flex flex-column align-items-center">
+              <i class="fas fa-list-check"></i>
+              <p>management</p>
+            </div>
+            <div class="task-wrapper col-4 col-sm-1 d-flex flex-column align-items-center">
+              <i class="fa-solid fa-bullhorn"></i>
+              <p>marketing</p>
+            </div>
+            <div class="task-wrapper col-4 col-sm-1 d-flex flex-column align-items-center">
+              <i class="fa-solid fa-chart-simple"></i>
+              <p>sales</p>
+            </div>
+            <div class="task-wrapper col-4 col-sm-1 d-flex flex-column align-items-center">
+              <i class="fas fa-people-group"></i>
+              <p>hr</p>
+            </div>
+            <div class="task-wrapper col-4 col-sm-1 d-flex flex-column align-items-center">
+              <i class="fas fa-gears"></i>
+              <p>operations</p>
             </div>
           </div>
+          <div class="container d-flex justify-content-center gap-4 mt-3">
+            <a class="btn btn-primary" href="#" role="button">Try Now</a>
+            <a class="btn btn-primary" href="#" role="button">Price List</a>
+          </div>
+          <p class="info-text align-self-center">Unlimited Free plan &nbsp;✦ No credit card needed </p>
         </div>
       </section>
+
+      <div class="container" id="showcase">
+          
+      </div>
+
 </body>
 </html>
