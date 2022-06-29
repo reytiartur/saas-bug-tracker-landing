@@ -11957,6 +11957,10 @@ fieldset:disabled .btn {
   }
 }
 
+body {
+  margin: 0 auto;
+}
+
 .task-wrapper {
   border: solid 2px #f8f9fa;
   border-radius: 15px;
@@ -11964,9 +11968,98 @@ fieldset:disabled .btn {
   min-width: 105px;
 }
 
+.task-wrapper:hover {
+  color: #f2ae41;
+  border-color: #f2ae41;
+}
+
+#showcase {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#showcase .showcase-img {
+  -webkit-clip-path: polygon(0 75%, 100% 90%, 100% 0, 0 0);
+          clip-path: polygon(0 75%, 100% 90%, 100% 0, 0 0);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#showcase .showcase-img img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-container {
+  -webkit-box-shadow: rgba(130, 110, 48, 0.1) 0px 8px 24px, rgba(169, 139, 51, 0.1) 0px 16px 56px, rgba(224, 207, 157, 0.1) 0px 24px 80px;
+          box-shadow: rgba(130, 110, 48, 0.1) 0px 8px 24px, rgba(169, 139, 51, 0.1) 0px 16px 56px, rgba(224, 207, 157, 0.1) 0px 24px 80px;
+  height: 6rem;
+  border-radius: 15px;
+  overflow-x: auto;
+}
+
+.btn-container .btn {
+  height: 100%;
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.btn-container .btn:focus {
+  border-bottom: #0d6efd 4px solid;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .info-text {
   font-size: 0.8rem;
   opacity: 0.7;
   margin: 0.4rem 0;
+}
+
+.mt-6 {
+  margin-top: 5rem;
+}
+
+@media (min-width: 992px) {
+  .task-wrapper:hover p {
+    opacity: 1;
+  }
+  .task-wrapper:hover i {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .task-wrapper p {
+    opacity: 0;
+    -webkit-transition: opacity ease 500ms;
+    transition: opacity ease 500ms;
+  }
+  .task-wrapper i {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    -webkit-transition: -webkit-transform ease-out 400ms;
+    transition: -webkit-transform ease-out 400ms;
+    transition: transform ease-out 400ms;
+    transition: transform ease-out 400ms, -webkit-transform ease-out 400ms;
+  }
+}
+
+@media (min-width: 992px) {
+  #start-screen .buttons .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 160px;
+    min-height: 55px;
+    font-size: 1.5vw;
+  }
 }
 /*# sourceMappingURL=custom.css.map */
