@@ -7,6 +7,10 @@ body {
     margin: 0 auto;
 }
 
+.navbar {
+    z-index: 2000;
+}
+
 .task-wrapper {
     border: solid 2px $light;
     border-radius: 15px;
@@ -36,24 +40,6 @@ body {
     }
 }
 
-.btn-container {
-    box-shadow: rgba(130, 110, 48, 0.1) 0px 8px 24px, rgba(169, 139, 51, 0.1) 0px 16px 56px, rgba(224, 207, 157, 0.1) 0px 24px 80px;
-    height: 6rem;
-    border-radius: 15px;
-    overflow-x: auto;
-
-    .btn {
-        height: 100%;
-        flex-basis: 1;
-        flex-grow: 1;
-
-        &:focus {
-            border-bottom: $primary 4px solid;
-            box-shadow: none;
-        }
-    }
-}
-
 .info-text {
     font-size: 0.8rem;
     opacity: 0.7;
@@ -62,6 +48,40 @@ body {
 
 .mt-6 {
     margin-top: 5rem;
+}
+
+@include media-breakpoint-down(lg) {
+    .btn-container {
+        width: 100%;
+        min-height: fit-content;
+        height: 4rem;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        
+        &::-webkit-scrollbar { 
+            display: none;
+        }
+    
+        .btn {
+            border-radius: 20px;
+            box-shadow: none;
+            border: $tangerin solid 1px;
+            margin-left: 0.4rem;
+    
+            &:focus {
+                background-color: $tangerin;
+                color: $light;
+                box-shadow: rgba(130, 110, 48, 0.3) 0px 8px 10px;
+            }
+        }
+    }
+
+    .text-container {
+        .class-name {
+            display: none;
+        }
+    }
 }
 
 @include media-breakpoint-up(lg) {
@@ -86,9 +106,7 @@ body {
             transition: transform ease-out 400ms;
         }
     }
-}
 
-@include media-breakpoint-up(lg) {
     #start-screen {
 
         .buttons {
@@ -100,8 +118,43 @@ body {
                 width: 160px;
                 min-height: 55px; 
                 font-size: 1.5vw;
+                border-radius: 16px;
             }
         }
     }
+
+    .btn-container {
+        box-shadow: rgba(130, 110, 48, 0.1) 0px 8px 24px, rgba(169, 139, 51, 0.1) 0px 16px 56px, rgba(224, 207, 157, 0.1) 0px 24px 80px;
+        height: 6rem;
+        border-radius: 15px;
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
     
-} 
+        .btn {
+            height: 100%;
+            flex-basis: content;
+            flex-grow: 1;
+    
+            &:focus {
+                border-bottom: $primary 4px solid;
+                box-shadow: none;
+                background: var(--bs-body-bg);
+                color: $primary;
+            }
+
+            &:hover {
+                background: rgba($color: $tangerin, $alpha: 0.1);
+            }
+        }
+    }
+
+    .video-text-container {
+        gap: 2rem;
+
+        .class-name {
+            color: $primary;
+        }
+    }
+}
